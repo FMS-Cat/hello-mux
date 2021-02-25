@@ -1,0 +1,27 @@
+<m:RectTransform
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:m="clr-namespace:Mux.Markup;assembly=Mux.Markup"
+    xmlns:main="using:Main"
+    xmlns:mu="clr-namespace:Mux.Markup;assembly=Mux.Markup.UI"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Main.MainTransform"
+    x:DataType="main:MainViewModel">
+    <mu:Text
+        Content="Hello world!"
+        Font="{Binding Font}" />
+    <m:RectTransform
+        X="{m:Stretch}"
+        Y="{m:Stretch}">
+        <mu:VerticalLayoutGroup
+            ChildAlignment="MiddleCenter"
+            ChildControlWidth="false"
+            ChildControlHeight="false"
+            ChildForceExpandWidth="false"
+            ChildForceExpandHeight="false"
+            Spacing="16" />
+        <main:HogeTransform
+            Text="Fuga" />
+        <main:HogeTransform />
+        <main:HogeTransform />
+    </m:RectTransform>
+</m:RectTransform>

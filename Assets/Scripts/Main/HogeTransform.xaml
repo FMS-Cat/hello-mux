@@ -1,0 +1,24 @@
+<m:RectTransform
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:m="clr-namespace:Mux.Markup;assembly=Mux.Markup"
+    xmlns:main="using:Main"
+    xmlns:mu="clr-namespace:Mux.Markup;assembly=Mux.Markup.UI"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Main.HogeTransform"
+    x:DataType="main:MainViewModel"
+    x:Name="_transform"
+    X="{m:Sized SizeDelta=256}"
+    Y="{m:Sized SizeDelta=64}">
+    <mu:Image
+        Color="{m:Color R=0, G=0.8, B=1}" />
+    <mu:VerticalLayoutGroup
+        ChildAlignment="MiddleCenter"
+        ChildForceExpandWidth="false"
+        ChildForceExpandHeight="false" />
+    <m:RectTransform>
+        <mu:Text
+            Content="{Binding Text, Source={x:Reference _transform}}"
+            Font="{Binding Font}"
+            FontSize="32" />
+    </m:RectTransform>
+</m:RectTransform>
